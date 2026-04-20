@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gruhapravesam Invitation | Manainvite</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Audio -->
+    <audio id="bg-music" loop>
+        <source src="assets/vachindama%20bgm.mpeg" type="audio/mpeg">
+    </audio>
+    <button id="audio-toggle" class="audio-btn"><i class="fas fa-volume-mute"></i></button>
+
+    <!-- Floating Petals Container -->
+    <div id="petals-container"></div>
+
+    <div class="wrapper">
+        <!-- Hero Section -->
+        <section class="screen hero" id="home">
+            <div class="glow-bg"></div>
+            <div class="content fade-in">
+                <div class="top-om">ॐ</div>
+                <p class="subtitle">With the blessings of God and elders,</p>
+                <p class="subtitle-2">We warmly invite you to</p>
+                <h2 class="sub-title-event">Bondada's House Ceremony</h2>
+                <h1 class="main-title">Gruhapravesam</h1>
+                
+                <div class="hero-image-wrapper">
+                    <img src="assets/real_house.jpg" alt="Our New Home" class="hero-image">
+                    <div class="image-glow"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Host Names Section -->
+        <section class="screen hosts scroll-anim">
+            <div class="ornament"></div>
+            <h3 class="host-name">Mr. Appalachari &<br>Mrs. Swarna Lakshmi Hema Latha</h3>
+            <p class="host-invite">Cordially invite you and your family</p>
+            
+            <div class="family-members">
+                <p class="family-title">With Best Regards:</p>
+                <p>Trinadha Siva Kameshwar</p>
+                <p>Venkata Sai Nayakar</p>
+                <p>Lakshmi Prasanna Naga Anjana</p>
+            </div>
+            
+            <div class="ornament bottom"></div>
+        </section>
+
+        <!-- Event Details Card -->
+        <section class="screen event-details scroll-anim">
+            <div class="glass-card">
+                <h2><i class="fas fa-calendar-alt"></i> Event Details</h2>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <span class="label">Date</span>
+                        <span class="value">Thursday, 7th May 2026</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Arrival</span>
+                        <span class="value">Evening Onwards</span>
+                    </div>
+                    <div class="detail-item prime">
+                        <span class="label">Muhurtham</span>
+                        <span class="value">10:31 PM</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Venue Section -->
+        <section class="screen venue scroll-anim">
+            <div class="glass-card venue-card">
+                <h2><i class="fas fa-map-marker-alt"></i> Venue</h2>
+                <p class="address">
+                    <strong>Plot No 17, New Residence</strong><br>
+                    Amkapuram Village, Arjith Singh Nagar,<br>
+                    Pipula Road, Backside Y.S. Reddy Convention,<br>
+                    Vijayawada - 520015
+                </p>
+                <a href="https://maps.google.com/?q=Y.S.+Reddy+convention,+Vijayawada" target="_blank" class="btn primary-btn maps-btn">
+                    <i class="fas fa-location-arrow"></i> Open Google Maps
+                </a>
+            </div>
+        </section>
+
+        <!-- Countdown Timer -->
+        <section class="screen countdown-section scroll-anim">
+            <h2>Awaiting the Auspicious Day</h2>
+            <div id="countdown" class="countdown-grid">
+                <div class="time-box">
+                    <span id="days" class="time-num">00</span>
+                    <span class="time-label">Days</span>
+                </div>
+                <div class="time-box">
+                    <span id="hours" class="time-num">00</span>
+                    <span class="time-label">Hours</span>
+                </div>
+                <div class="time-box">
+                    <span id="mins" class="time-num">00</span>
+                    <span class="time-label">Mins</span>
+                </div>
+                <div class="time-box">
+                    <span id="secs" class="time-num">00</span>
+                    <span class="time-label">Secs</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Quote -->
+        <section class="screen quote-section scroll-anim">
+            <div class="ornament"></div>
+            <p class="home-quote">"A house is built with walls and beams,<br>A home is built with love and dreams."</p>
+            <div class="ornament bottom"></div>
+        </section>
+
+        <!-- Blessings Message -->
+        <section class="screen blessings scroll-anim">
+            <p class="blessing-text">"Your presence and blessings will make our celebration complete."</p>
+        </section>
+
+        <!-- Share Section -->
+        <section class="screen rsvp-section scroll-anim">
+            <h2>Share</h2>
+
+            <div class="share-container">
+                <button id="share-btn" class="btn share-btn">
+                    <i class="fas fa-share-alt"></i> Share This Invitation
+                </button>
+            </div>
+
+            <!-- Custom Share Modal -->
+            <div id="share-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h3>Share via</h3>
+                    <div class="social-share-btns">
+                        <a href="#" id="share-wa" class="social-btn wa"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" id="share-fb" class="social-btn fb"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" id="share-copy" class="social-btn copy"><i class="fas fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-ornament"></div>
+            <p>Awaiting your gracious presence</p>
+            <p class="signature">- The Bondada Family</p>
+
+            <div class="branding">
+                <div class="booking-ad">
+                    <p class="ad-title">Want a beautiful invitation like this?</p>
+                    <div class="scan-me-container">
+                        <span class="scan-me-badge">SCAN ME</span>
+                        <img src="assets/insta_scanner.jpg" alt="Scan to Book" class="insta-qr booking-qr">
+                    </div>
+                    <p class="ad-subtitle">Scan to book with Manainvite</p>
+                </div>
+                
+                <a href="https://www.instagram.com/mana_invite?igsh=bzZsbmJxZ3lwcWJs" target="_blank" class="insta-link">
+                    <i class="fab fa-instagram"></i> Follow @mana_invite
+                </a>
+                
+                <p style="margin-top: 25px;">Designed with ❤️ by <strong>Manainvite</strong></p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
