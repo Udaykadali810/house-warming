@@ -33,9 +33,33 @@ function createPetal() {
     }, duration * 1000);
 }
 
-// Create petals periodically
-setInterval(createPetal, 300);
-for(let i=0; i<10; i++) setTimeout(createPetal, Math.random()*2000);
+// Defer petals until doors open
+let petalInterval;
+function startPetals() {
+    petalInterval = setInterval(createPetal, 300);
+    for(let i=0; i<10; i++) setTimeout(createPetal, Math.random()*2000);
+}
+
+// Door Logic
+document.getElementById('open-door-btn').addEventListener('click', function() {
+    const overlay = document.getElementById('door-overlay');
+    const wrapper = document.querySelector('.wrapper');
+    
+    // Play Audio immediately on user interaction
+    audio.play().catch(e => console.log("Audio play failed:", e));
+    isPlaying = true;
+    audioIcon.className = 'fas fa-volume-up';
+
+    // Trigger door opening and zoom effect
+    overlay.classList.add('door-open');
+    wrapper.classList.add('entered');
+
+    // Remove overlay and start petals when doors finish opening
+    setTimeout(() => {
+        overlay.style.display = 'none';
+        startPetals();
+    }, 1500);
+});
 
 // Audio Control
 const audio = document.getElementById('bg-music');
